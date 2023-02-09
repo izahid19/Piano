@@ -1,0 +1,46 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#403075, #882D61);
+}
+
+.piano {
+  display: flex;
+  position: relative;
+  margin-left: 4px;
+}
+
+.key {
+  height: calc(var(--width) * 4);
+  width: var(--width);
+}
+
+.white {
+  --width: 100px;
+  background-color: white;
+  border: 1px solid #333;
+}
+
+.white.active {
+  background-color: #CCC;
+}
+
+.black {
+  --width: 60px;
+  background-color: black;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+}
+
+.black.active {
+  background-color: #333;
+}
